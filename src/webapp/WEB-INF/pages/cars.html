@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <h2>Cars</h2>
+    <table border="1">
+        <tr>
+            <th bgcolor="aqua">Brand</th>
+            <th bgcolor="aqua">Color</th>
+            <th bgcolor="aqua">Price</th>
+        </tr>
+        <tr>
+        <tr th:each="mes : ${cars}">
+            <td bgcolor="#ffe4c4" th:text="${mes.getCarBrand()}"></td>
+            <td bgcolor="#ffe4c4" th:text="${mes.getCarColor()}"></td>
+            <td bgcolor="#ffe4c4" th:text="${mes.getCarPriceUSD()}"></td>
+        </tr>
+        </tr>
+    </table>
+<!--    <h1>Вот и все!</h1>-->
+</div>
+</body>
+</html>
